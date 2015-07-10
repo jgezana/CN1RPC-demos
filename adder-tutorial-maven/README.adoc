@@ -1,0 +1,29 @@
+= Simple Adder Tutorial (Maven)
+
+This is a sample project using the https://github.com/shannah/CN1RPC[CN1RPC library] to implement a simple client-server application in Codename One.  It uses Codename One for the client and a Maven Java Web Project for the server - and CN1RPC for client server communication.
+
+See the https://github.com/shannah/CN1RPC/wiki/SimpleAdder-Tutorial[companion tutorial] for more information.
+
+Also check out the link:../adder-tutorial[non-maven version of this project] to see how to use a regular Java Web Project for the server project.
+
+== Build Instructions
+
+**Get a list of available build targets:**
+
+----
+$ ant -p
+----
+
+**Run Project**
+
+----
+$ ant
+----
+
+**Clean project**
+
+----
+$ ant clean-all
+----
+
+NOTE: Don't be fooled by the use of Ant here.  The server project is still using Maven. I just use Ant to provide an adhoc build for the project as a whole.  It calls maven to do the server project build.

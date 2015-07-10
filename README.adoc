@@ -1,0 +1,5 @@
+= CN1RPC Demos
+
+This repository contains sample client-server Codename One projects using the https://github.com/shannah/CN1RPC[CN1RPC library].
+
+Most of these sample projects correspond with tutorials in the https://github.com/shannah/CN1RPC/wiki[CN1RPC Wiki]

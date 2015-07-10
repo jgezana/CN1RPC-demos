@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Simple Adder Tutotial" default="run" basedir=".">
+  <target name="build-client" description="Builds the Client Project">
+    <ant inheritall="false" antfile="adder-client/build.xml" target="jar" />
+  </target>
+  <target name="build-server" description="Builds the server project">
+    <ant inheritall="false" antfile="adder-server/build.xml" target="dist" />
+  </target>
+  <target name="build-all" depends="build-server,build-client" description="Builds the full project">
+  </target>
+  <target name="clean-all">
+    <ant inheritall="false" antfile="adder-client/build.xml" target="clean" />
+    <ant inheritall="false" antfile="adder-server/build.xml" target="clean" />
+  </target>
+  
+  <target name="run" depends="build-all" description="Run the server and client projects">
+     <ant inheritall="false" antfile="adder-server/build.xml" target="run" />
+     <ant inheritall="false" antfile="adder-client/build.xml" target="run" />
+  </target>
+</project>

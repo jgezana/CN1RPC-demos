@@ -1,0 +1,27 @@
+= Movie Database Tutorial
+
+This is a sample project using the https://github.com/shannah/CN1RPC[CN1RPC library] to implement a client-server application in Codename One.  It uses Codename One for the client and a Maven Java Web Project for the server - and CN1RPC for client server communication.
+
+See the https://github.com/shannah/CN1RPC/wiki/Movie-Database-Tutorial[companion tutorial] for more information.
+
+
+== Build Instructions
+
+**Get a list of available build targets:**
+
+----
+$ ant -p
+----
+
+**Run Project**
+
+----
+$ ant
+----
+
+**Clean project**
+
+----
+$ ant clean-all
+----
+

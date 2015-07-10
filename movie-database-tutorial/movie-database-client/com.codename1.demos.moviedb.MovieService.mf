@@ -1,0 +1,17 @@
+com/codename1/demos/moviedb/ExternalizableFactory.java
+com/codename1/demos/moviedb/FindMoviesRequest.java
+com/codename1/demos/moviedb/FindMoviesRequestImpl.java
+com/codename1/demos/moviedb/FindMoviesResponse.java
+com/codename1/demos/moviedb/FindMoviesResponseImpl.java
+com/codename1/demos/moviedb/InsertMovieRequest.java
+com/codename1/demos/moviedb/InsertMovieRequestImpl.java
+com/codename1/demos/moviedb/InsertMovieResponse.java
+com/codename1/demos/moviedb/InsertMovieResponseImpl.java
+com/codename1/demos/moviedb/Movie.java
+com/codename1/demos/moviedb/MovieImpl.java
+com/codename1/demos/moviedb/MovieProxy.java
+com/codename1/demos/moviedb/MovieServiceProxy.java
+com/codename1/demos/moviedb/UpdateMovieRequest.java
+com/codename1/demos/moviedb/UpdateMovieRequestImpl.java
+com/codename1/demos/moviedb/UpdateMovieResponse.java
+com/codename1/demos/moviedb/UpdateMovieResponseImpl.java

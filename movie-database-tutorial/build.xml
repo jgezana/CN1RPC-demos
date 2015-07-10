@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="CN1RPC Movie Database Tutorial" default="run" basedir=".">
+  <target name="build-client" description="Builds the Client Project">
+    <ant inheritall="false" antfile="movie-database-client/build.xml" target="jar" />
+  </target>
+  <target name="build-server" description="Builds the server project">
+    <exec dir="movie-database-server" executable="mvn">
+      <arg value="install"/>
+    </exec>
+  </target>
+  <target name="build-all" depends="build-server,build-client" description="Builds the full project">
+  </target>
+  <target name="clean-all">
+    <ant inheritall="false" antfile="movie-database-client/build.xml" target="clean" />
+    <exec dir="movie-database-server" executable="mvn">
+      <arg value="clean"/>
+    </exec>
+  </target>
+  
+  <target name="run" depends="build-all" description="Run the server and client projects">
+     <exec dir="movie-database-server" executable="mvn">
+      <arg line="-Dnetbeans.deploy=true"/>
+      <arg value="package"/>
+    </exec>
+    <ant inheritall="false" antfile="movie-database-client/build.xml" target="run" />
+  </target>
+</project>

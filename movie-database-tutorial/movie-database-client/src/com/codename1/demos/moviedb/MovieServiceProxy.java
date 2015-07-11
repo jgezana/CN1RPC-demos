@@ -50,15 +50,15 @@ public class MovieServiceProxy {
     throw new RuntimeException("No matching implementation found for class.");
   }
 
-  public FindMoviesResponse findMovies(FindMoviesRequest arg0) throws IOException {
-    return (FindMoviesResponse)WebServiceProxyCall.invokeWebserviceSync(def_findMovies, arg0);
+  public FindMoviesResponse findMovies(FindMoviesRequest request) throws IOException {
+    return (FindMoviesResponse)WebServiceProxyCall.invokeWebserviceSync(def_findMovies, request);
   }
 
-  public UpdateMovieResponse updateMovie(UpdateMovieRequest arg0) throws IOException {
-    return (UpdateMovieResponse)WebServiceProxyCall.invokeWebserviceSync(def_updateMovie, arg0);
+  public UpdateMovieResponse updateMovie(UpdateMovieRequest request) throws IOException {
+    return (UpdateMovieResponse)WebServiceProxyCall.invokeWebserviceSync(def_updateMovie, request);
   }
 
-  public InsertMovieResponse insertMovie(InsertMovieRequest arg0) throws IOException {
-    return (InsertMovieResponse)WebServiceProxyCall.invokeWebserviceSync(def_insertMovie, arg0);
+  public InsertMovieResponse insertMovie(InsertMovieRequest request) throws IOException {
+    return (InsertMovieResponse)WebServiceProxyCall.invokeWebserviceSync(def_insertMovie, request);
   }
 }

@@ -10,7 +10,13 @@ import java.io.IOException;
 import java.lang.Override;
 import java.lang.String;
 
-public class UpdateMovieRequestImpl extends UpdateMovieRequest implements Externalizable {
+public class UpdateMovieRequestImpl extends UpdateMovieRequest implements Externalizable, ExternalizableFactory.Versioned {
+  int __version = 1;
+
+  public void setVersion(int version) {
+    __version=version;
+  }
+
   @Override
   public String getObjectId() {
     return "com.codename1.demos.moviedb.UpdateMovieRequest";
@@ -18,16 +24,27 @@ public class UpdateMovieRequestImpl extends UpdateMovieRequest implements Extern
 
   @Override
   public int getVersion() {
-    return 1;
+    return __version;
   }
 
   @Override
   public void externalize(DataOutputStream out) throws IOException {
-    Util.writeObject(this.movie, out);
+    if (__version == 1) {
+      Util.writeObject(this.movie, out);
+    }
+    else {
+      throw new RuntimeException("Unsupported write version for entity "+getObjectId()+" version "+__version+"");
+    }
   }
 
   @Override
   public void internalize(int version, DataInputStream in) throws IOException {
-    this.movie = (com.codename1.demos.moviedb.Movie)Util.readObject(in);
+    if (version == 1) {
+      __version = version;
+      this.movie = (com.codename1.demos.moviedb.Movie)Util.readObject(in);
+    }
+    else {
+      throw new RuntimeException("Unsupported read version for entity "+getObjectId()+" version "+version+"");
+    }
   }
 }

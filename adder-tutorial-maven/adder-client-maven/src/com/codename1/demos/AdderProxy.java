@@ -39,7 +39,7 @@ public class AdderProxy {
     throw new RuntimeException("No matching implementation found for class.");
   }
 
-  public int addInts(int arg0, int arg1) throws IOException {
-    return (Integer)WebServiceProxyCall.invokeWebserviceSync(def_addInts, arg0, arg1);
+  public int addInts(int a, int b) throws IOException {
+    return (Integer)WebServiceProxyCall.invokeWebserviceSync(def_addInts, a, b);
   }
 }

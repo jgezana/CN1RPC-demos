@@ -9,7 +9,6 @@ com/codename1/demos/moviedb/InsertMovieResponse.java
 com/codename1/demos/moviedb/InsertMovieResponseImpl.java
 com/codename1/demos/moviedb/Movie.java
 com/codename1/demos/moviedb/MovieImpl.java
-com/codename1/demos/moviedb/MovieProxy.java
 com/codename1/demos/moviedb/MovieServiceProxy.java
 com/codename1/demos/moviedb/UpdateMovieRequest.java
 com/codename1/demos/moviedb/UpdateMovieRequestImpl.java
